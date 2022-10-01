@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2? família=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #3C444C;
+    font-size: 100%;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+#cabecalho-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+#cabecalho-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.cabecalho-menu-item{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #CBCFD4;
+}
+
+.description-logo{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: #CBCFD4;
+}
+
+main{
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-home{
+
+}
+
+.rodape-logo{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
