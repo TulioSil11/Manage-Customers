@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2? família=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&family=Pacifico&family=Rammetto+One&family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&family=Rammetto+One&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +9,7 @@
 }
 
 body{
-    background-color: #3C444C;
+    background-color: #b8e7f3;
     font-size: 100%;
 }
 
@@ -20,15 +21,20 @@ header{
     padding: 24px;
 }
 
-#cabecalho-logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .logo{
-    width: 50px;
-    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+    
 }
+
+.logo-imagem{
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+}
+
 
 #cabecalho-menu{
     display: flex;
@@ -37,7 +43,7 @@ header{
 }
 
 .cabecalho-menu-item{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Kanit', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -45,29 +51,31 @@ header{
     display: flex;
     align-items: center;
     text-align: right;
-    color: #CBCFD4;
 }
 
-.description-logo{
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    color: #CBCFD4;
-}
 
 main{
-    left: 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+}
+#conteudo-principal{
+    padding: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
 }
 
 .image-home{
-
+    width: 95%;
+    height: 20%;
+    margin: 10px;
 }
 
-.rodape-logo{
-    margin: 10px;
+
+footer{
+    position: absolute;
+    height: 120px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
