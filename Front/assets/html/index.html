@@ -11,7 +11,7 @@
     <title>Customer Management </title>
 </head>
 
-<body>
+<body onload="RenderHome()">
 
     <header>
          
@@ -20,22 +20,34 @@
             <h3 class="logo-description">Customer <br>Management</h3>
         </div>
 
-    <div id="cabecalho-menu">
-        <a class="cabecalho-menu-item" href="../html/index.html">Home</a>
-        <a class="cabecalho-menu-item" onclick="RenderScreenGet()">Get</a>
-        <a class="cabecalho-menu-item">Post</a>
-        <a class="cabecalho-menu-item">Put</a>
-        <a class="cabecalho-menu-item">Delete</a>
+    <div class="cabecalho-menu">
+
+        <button class="cabecalho-menu-item"  onclick="RenderHome()">
+            <p>Home</p>
+        </button>
+
+        <button class="cabecalho-menu-item" onclick="RenderScreenGet()">
+            <p>Buscar clientes</p>
+        </button>
+
+        <button class="cabecalho-menu-item">
+            <p>Inserir clientes</p>
+        </button>
+
+        <button class="cabecalho-menu-item">
+            <p>Atualizar clientes</p>
+        </button>
+
+        <button class="cabecalho-menu-item">
+            <p>Excluir clientes</p>
+        </button>
+
     </div>
 
     </header>
 
     <main>
-        <div id="conteudo-principal">
-            <img class="image-home" src="../imgs/managerHomePage.jpeg" alt="gerenciandoSeusClientes">
-            <p>Gerencie seus clientes com o Customer Management</p>
-        </div>
-        
+        <div id="conteudo-principal"></div>       
     </main>
 
     <footer>
