@@ -1,5 +1,5 @@
 function RenderHome(){
-    let element = document.getElementById("conteudo-principal");
+    let element = document.getElementById("main-contend");
 
     const text = CreateElement("p", "Gerencie seus clientes com o Customer Management");
 
@@ -8,17 +8,17 @@ function RenderHome(){
     img.setAttribute("src", "../imgs/managerHomePage.jpeg");
     img.setAttribute("alt", "Gerenciando seus clientes");
 
-    const divPrincipalHome = CreateElement("div", [img, text], "class", "conteudo-principal-home");
+    const divHomeMain = CreateElement("div", [img, text], "class", "main-home-content");
 
-    let divPrincipal = 
-    CreateElement("div", [divPrincipalHome], "id", "conteudo-principal");
+    let divMain = 
+    CreateElement("div", [divHomeMain], "id", "main-contend");
 
-    element.parentNode.replaceChild(divPrincipal, element);
+    element.parentNode.replaceChild(divMain, element);
 }
 
 
 function RenderScreenGet(){
-    let element = document.getElementById("conteudo-principal");
+    let element = document.getElementById("main-contend");
 
     const title = CreateElement("h3", "Buscar clientes");
 
@@ -26,58 +26,58 @@ function RenderScreenGet(){
     CreateElement("p", "Buscar cliente por id")
 
     const buttomGetById = 
-    CreateElement("button", [descriptionButtomGetId], "class", "conteudo-principal-get-clientes-button");
+    CreateElement("button", [descriptionButtomGetId], "class", "content-main-button");
     buttomGetById.setAttribute("onclick", "RenderScreenGetCustumerById()")
 
     const descriptionButtomAllCustumer = 
     CreateElement("p", "Buscar todos os clientes")
 
     const butomAllCustumers = 
-    CreateElement("button", [descriptionButtomAllCustumer], "class", "conteudo-principal-get-clientes-button");
+    CreateElement("button", [descriptionButtomAllCustumer], "class", "content-main-button");
     butomAllCustumers.setAttribute("onclick", "RenderScreenRusultGetAllCustumers()");
 
     const divMenu = 
-    CreateElement("div", [buttomGetById, butomAllCustumers], "class", "conteudo-principal-get-clientes-menu");
+    CreateElement("div", [buttomGetById, butomAllCustumers], "class", "content-main-menu");
 
-    let divPrincipalGet = 
-    CreateElement("div", [title, divMenu], "class", "conteudo-principal-get-clientes")
+    let divMainGet = 
+    CreateElement("div", [title, divMenu], "class", "main-contend")
 
-    let divPrincipal = 
-    CreateElement("div", [divPrincipalGet], "id", "conteudo-principal");
+    let divMain = 
+    CreateElement("div", [divMainGet], "id", "main-contend");
 
-    element.parentNode.replaceChild(divPrincipal, element);
+    element.parentNode.replaceChild(divMain, element);
 }
 
 function RenderScreenGetCustumerById(){
-    let element = document.getElementById("conteudo-principal");
+    let element = document.getElementById("main-contend");
 
     const title = CreateElement("p", "Buscar cliente pelo id: ");
 
-    const imput = CreateElement("input", "", "class", "conteudo-principal-get-clientes-by-id-input");
+    const imput = CreateElement("input", "", "id", "main-contend-id-input");
     imput.setAttribute("type", "text");
 
-    const divSeacrh = CreateElement("div", [title, imput], "class", "conteudo-principal-get-clientes-by-id-seacrh")
+    const divSeacrh = CreateElement("div", [title, imput], "class", "content-main-menu")
 
     const descriptionButtom = 
     CreateElement("p", "Buscar")
     const butom = 
-    CreateElement("button", [descriptionButtom], "class", "conteudo-principal-get-by-id-clientes-button");
+    CreateElement("button", [descriptionButtom], "class", "content-main-button");
     butom.setAttribute("onclick", "RenderScreenRusultGetById()");
 
-    let divPrincipalGet = 
-    CreateElement("div", [divSeacrh, butom], "class", "conteudo-principal-get-clientes-by-id")
+    let divMainGet = 
+    CreateElement("div", [divSeacrh, butom], "class", "main-contend")
 
-    let divPrincipal = 
-    CreateElement("div", [divPrincipalGet], "id", "conteudo-principal");
+    let divMain = 
+    CreateElement("div", [divMainGet], "id", "main-contend");
 
-    element.parentNode.replaceChild(divPrincipal, element);
+    element.parentNode.replaceChild(divMain, element);
 }
 
 function RenderScreenRusultGetById(){
-    let element = document.getElementById("conteudo-principal");
-    let idCustumer = document.getElementsByClassName("conteudo-principal-get-clientes-by-id-input")[0].value;
+    let element = document.getElementById("main-contend");
+    let idCustumer = document.getElementById("main-contend-id-input").value;
 
-    let divContend = CreateElement("div", "", "class", "conteudo-principal-get-clientes-by-id-result");
+    let divContend = CreateElement("div", "");
 
     if(idCustumer != null){
         custumers = GetCustumersById(idCustumer);
@@ -117,14 +117,14 @@ function RenderScreenRusultGetById(){
     }
   
 
-    let divPrincipalGet = 
-    CreateElement("div", "", "class", "conteudo-principal-get-clientes-by-id");
-    divPrincipalGet.appendChild(divContend);
+    let divMainGet = 
+    CreateElement("div", "", "class", "main-contend");
+    divMainGet.appendChild(divContend);
 
-    let divPrincipal = 
-    CreateElement("div", [divPrincipalGet], "id", "conteudo-principal");
+    let divMain = 
+    CreateElement("div", [divMainGet], "id", "main-contend");
 
-    element.parentNode.replaceChild(divPrincipal, element);
+    element.parentNode.replaceChild(divMain, element);
 }
 
 
@@ -144,11 +144,11 @@ function GetCustumersById(idProduct){
 
 
 function RenderScreenRusultGetAllCustumers(){
-    let element = document.getElementById("conteudo-principal");
+    let element = document.getElementById("main-contend");
 
-    let divContend = CreateElement("div", "", "class", "conteudo-principal-get-clientes-result");
+    let divContend = CreateElement("div", "");
 
-    custumers = GetCustumers();
+    custumers = GetAllCustumers();
 
     let table = CreateElement("table", "");
         let columId = CreateElement("td", "");
@@ -187,20 +187,20 @@ function RenderScreenRusultGetAllCustumers(){
 
     divContend.appendChild(table);    
   
-    let divPrincipalGet = 
-    CreateElement("div", "", "class", "conteudo-principal-get-clientes-by-id");
-    divPrincipalGet.appendChild(divContend);
+    let divMainGet = 
+    CreateElement("div", "", "class", "main-contend");
+    divMainGet.appendChild(divContend);
 
-    let divPrincipal = 
-    CreateElement("div", [divPrincipalGet], "id", "conteudo-principal");
+    let divMain = 
+    CreateElement("div", [divMainGet], "id", "main-contend");
 
-    element.parentNode.replaceChild(divPrincipal, element);
+    element.parentNode.replaceChild(divMain, element);
 
 }
 
 
 
-function GetCustumers(){
+function GetAllCustumers(){
 
     //fazer a requisicao
     clientes = [
@@ -220,6 +220,225 @@ function GetCustumers(){
 
     return clientes;
 }
+
+
+
+function RenderScreenPost(){
+    let element = document.getElementById("main-contend");
+    
+    const title = CreateElement("p", "Inserir um novo cliente:");
+
+    let table = CreateElement("table", "");
+
+    let columCampos = CreateElement("td", "");
+    let columImput = CreateElement("td", "");
+  
+    const titleNome = CreateElement("p", "Nome:  ");
+    const titleTelefone = CreateElement("p", "Telefone:  ");
+    const titleCPF = CreateElement("p", "CPF:  ");
+
+    const imputName = CreateElement("input", "", "class", "main-contend-imput-Nome");
+    imputName.setAttribute("type", "text");   
+   
+    const imputTelefone = CreateElement("input", "", "class", "main-contend-imput-Telefone");
+    imputTelefone.setAttribute("type", "text");
+
+    const imputCPF = CreateElement("input", "", "class", "main-contend-imput-CPF");
+    imputCPF.setAttribute("type", "text");
+
+    columCampos.appendChild(CreateElement("tr", [titleNome]));
+    columCampos.appendChild(CreateElement("tr", [titleTelefone]));
+    columCampos.appendChild(CreateElement("tr", [titleCPF]));
+
+    columImput.appendChild(CreateElement("tr", [imputName]));
+    columImput.appendChild(CreateElement("tr", [imputTelefone]));
+    columImput.appendChild(CreateElement("tr", [imputCPF]));
+
+    table.appendChild(columCampos);
+    table.appendChild(columImput);
+
+    const descriptionButtom = 
+    CreateElement("p", "Inserir")
+    const butom = 
+    CreateElement("button", [descriptionButtom], "class", "content-main-button");
+    butom.setAttribute("onclick", "RenderResultPost()");
+
+    let divMainPost = 
+    CreateElement("div", [title,table, butom],
+     "class", "main-contend")
+
+    let divMain= 
+    CreateElement("div", [divMainPost], "id", "main-contend");
+
+    element.parentNode.replaceChild(divMain, element);
+}
+
+
+function RenderResultPost(){
+
+    let element = document.getElementById("main-contend");
+    let divContend = CreateElement("div", "");
+
+    const nome = document.getElementsByClassName("main-contend-imput-Nome")[0].value;
+    const telefone = document.getElementsByClassName("main-contend-imput-Telefone")[0].value;
+    const CPF = document.getElementsByClassName("main-contend-imput-CPF")[0].value;
+
+    const postCustumer = PostCustumer(nome, telefone, CPF);
+
+    postCustumer === true? divContend.appendChild(CreateElement("h1", "Cliente inserido com sucesso!")): 
+    divContend.appendChild(CreateElement("h1", "Cliente nao inserido, verifique os dados e tente novamente."))
+    
+
+    let divMainPost = 
+    CreateElement("div", "", "class", "main-contend");
+    divMainPost.appendChild(divContend);
+
+    let divMain = 
+    CreateElement("div", [divMainPost], "id", "main-contend");
+
+    element.parentNode.replaceChild(divMain, element);
+}
+
+function PostCustumer(Nome, Telefone, CPF){
+    return true;
+}
+
+
+function RenderScreenPut(){
+    let element = document.getElementById("main-contend");
+    
+    const title = CreateElement("p", "Atualizar cliente:");
+
+    let table = CreateElement("table", "");
+
+    let columCampos = CreateElement("td", "");
+    let columImput = CreateElement("td", "");
+  
+    const titleNome = CreateElement("p", "Nome:  ");
+    const titleTelefone = CreateElement("p", "Telefone:  ");
+    const titleCPF = CreateElement("p", "CPF:  ");
+
+    const imputName = CreateElement("input", "", "class", "main-contend-imput-Nome");
+    imputName.setAttribute("type", "text");   
+   
+    const imputTelefone = CreateElement("input", "", "class", "main-contend-imput-Telefone");
+    imputTelefone.setAttribute("type", "text");
+
+    const imputCPF = CreateElement("input", "", "class", "main-contend-imput-CPF");
+    imputCPF.setAttribute("type", "text");
+
+    columCampos.appendChild(CreateElement("tr", [titleNome]));
+    columCampos.appendChild(CreateElement("tr", [titleTelefone]));
+    columCampos.appendChild(CreateElement("tr", [titleCPF]));
+
+    columImput.appendChild(CreateElement("tr", [imputName]));
+    columImput.appendChild(CreateElement("tr", [imputTelefone]));
+    columImput.appendChild(CreateElement("tr", [imputCPF]));
+
+    table.appendChild(columCampos);
+    table.appendChild(columImput);
+
+    const descriptionButtom = 
+    CreateElement("p", "Atualizar")
+    const butom = 
+    CreateElement("button", [descriptionButtom], "class", "content-main-button");
+    butom.setAttribute("onclick", "RenderResultPut()");
+
+    let divMainPut = 
+    CreateElement("div", [title,table, butom],
+     "class", "main-contend")
+
+    let divMain = 
+    CreateElement("div", [divMainPut], "id", "main-contend");
+
+    element.parentNode.replaceChild(divMain, element);
+}
+
+
+function RenderResultPut(){
+
+    let element = document.getElementById("main-contend");
+    let divContend = CreateElement("div", "", "class", "main-contend-put-result");
+
+    const nome = document.getElementsByClassName("main-contend-imput-Nome")[0].value;
+    const telefone = document.getElementsByClassName("main-contend-imput-Telefone")[0].value;
+    const CPF = document.getElementsByClassName("main-contend-imput-CPF")[0].value;
+
+    const putCustumer = PutCustumer(nome, telefone, CPF);
+
+    putCustumer === true? divContend.appendChild(CreateElement("h1", "Cliente atualizado com sucesso!")): 
+    divContend.appendChild(CreateElement("h1", "Cliente nao atualizado, verifique os dados e tente novamente."))
+    
+
+    let divMainPut = 
+    CreateElement("div", "", "class", "main-contend");
+    divMainPut.appendChild(divContend);
+
+    let divMain = 
+    CreateElement("div", [divMainPut], "id", "main-contend");
+
+    element.parentNode.replaceChild(divMain, element);
+}
+
+function PutCustumer(Nome, Telefone, CPF){
+    return true;
+}
+
+function RenderScreenDelete(){
+    let element = document.getElementById("main-contend");
+    
+    const title = CreateElement("p", "Excluir um cliente:");
+
+    const imputId = CreateElement("input", "", "class", "main-contend-id-input");
+    imputId.setAttribute("type", "text");
+
+    const divImput = CreateElement("div", [title, imputId], "class", "content-main-menu")
+
+    const descriptionButtom = 
+    CreateElement("p", "Excluir")
+
+    const butom = 
+    CreateElement("button", [descriptionButtom], "class", "content-main-button");
+    butom.setAttribute("onclick", "RenderResultDelete()");
+
+    let divMainDelete = 
+    CreateElement("div", [divImput, butom],
+     "class", "main-contend")
+
+    let divMain = 
+    CreateElement("div", [divMainDelete], "id", "main-contend");
+
+    element.parentNode.replaceChild(divMain, element);
+}
+
+
+function RenderResultDelete(){
+
+    let element = document.getElementById("main-contend");
+    let divContend = CreateElement("div", "");
+
+    const idCustumer = document.getElementsByClassName("main-contend-id-input")[0].value;
+
+    const deleteCustumer = DeleteCustumer(idCustumer);
+
+    deleteCustumer === true? divContend.appendChild(CreateElement("h1", "Cliente deletado com sucesso!")): 
+    divContend.appendChild(CreateElement("h1", "Cliente nao deletado, verifique os dados e tente novamente."))
+    
+
+    let divMainDelete = 
+    CreateElement("div", "", "class", "main-contend");
+    divMainDelete.appendChild(divContend);
+
+    let divMain = 
+    CreateElement("div", [divMainDelete], "id", "main-contend");
+
+    element.parentNode.replaceChild(divMain, element);
+}
+
+function DeleteCustumer(idCustumer){
+    return true;
+}
+
 
 
 

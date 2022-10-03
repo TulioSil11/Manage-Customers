@@ -8,9 +8,6 @@
     text-decoration: none;
 }
 
-button:hover{
-    background-color: #65dcfa;
-}
 
 body{
     background-color: #b8e7f3;
@@ -33,14 +30,14 @@ header{
     
 }
 
-.logo-imagem{
+.logo-image{
     width: 90px;
     height: 90px;
     padding: 5px;
 }
 
 
-.cabecalho-menu{
+.head-menu{
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -51,7 +48,7 @@ header{
     line-height: 12px;
 }
 
-.cabecalho-menu-item{
+.head-menu-item{
     background-color:rgba(144,  203,  44,  0);
     width: 80px;
     height: 40px;
@@ -65,7 +62,8 @@ main{
     flex-direction: column;
     justify-content: center;
 }
-.conteudo-principal-home{
+
+.main-home-content{
     padding: 15px;
     font-family: 'Kanit', sans-serif;
     font-size: 20px;
@@ -77,27 +75,16 @@ main{
     margin: 10px;
 }
 
-.conteudo-principal-get-clientes{
-    position: relative;
+
+.content-main-menu{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 60vh;
-    padding: 15px;
-    font-family: 'Kanit', sans-serif;
-    font-size: 20px;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
 }
 
-.conteudo-principal-get-clientes-menu{
-    display: flex;
-    flex-direction: row;
-}
-
-.conteudo-principal-get-clientes-button{
+.content-main-button{
     position: relative;
-    width: 200px;
+    width: 250px;
     height: 50px;
     margin-right: 15px;
     margin-top: 10px;
@@ -106,13 +93,13 @@ main{
     border-radius: 20px;
     font-family: 'Kanit', sans-serif;
     font-style: normal;
-
+    font-size: 20px;
 }
 
-.conteudo-principal-get-clientes-by-id{
+.main-contend{
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
     width: 100%;
     height: 60vh;
     padding: 15px;
@@ -122,13 +109,23 @@ main{
     align-items: center;
 }
 
-.conteudo-principal-get-clientes-by-id-input{
-    width: 90px;
-    height: 30px;
-    margin-left: 10px;
+footer{
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button:hover{
+    background-color: #65dcfa;
+}
+
+input{
     background-color: #a5eafc;
     border-radius: 20px;
     outline: #010708;
+    margin-left: 10px;
     width: 100px;
     height: 20px;
     font-family: 'Kanit', sans-serif;
@@ -136,29 +133,10 @@ main{
     text-align: center;
 }
 
-.conteudo-principal-get-clientes-by-id-seacrh{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.conteudo-principal-get-by-id-clientes-button{
-    position: relative;
-    width: 200px;
-    height: 50px;
-    margin-right: 15px;
-    margin-top: 10px;
-    background-color:rgba(144,  203,  44,  0);
-    outline: #010708;
-    border-radius: 20px;
-    font-family: 'Kanit', sans-serif;
-    font-style: normal;
-    font-size: 20px;
-}
-
 table {
     border: 1px solid;
     border-collapse: collapse;
+    
 }
 
 th, tr{
@@ -168,14 +146,6 @@ th, tr{
 
 .title-table{
     background-color: #65dcfa;
-}
-
-footer{
-    position: absolute;
-    height: 120px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 
