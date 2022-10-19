@@ -17,6 +17,26 @@ function RenderHome(){
 }
 
 
+function RenderAboutSite(){
+    let element = document.getElementById("main-contend");
+
+    const text = CreateElement("H2", "Projetamos o Magenament Custumer pensando nas micro e pequenas empresas.");
+    const text2 = CreateElement("P", `A complexidade para gerir uma empresa é desafiadora, e uma das operações mais importates de uma empresa que e 
+    gerenciar clientes pode acabar sendo desafiadora, e é fácil se perder em meio a planilhas cheias de informações. 
+    Por isso, entendemos que para um negócio crescer, o trabalho precisa ser organizado, fluído e prazeroso.
+    Em 2022, arregaçamos as mangas e criamos o Magenament Custumer, que conta com funcionalidades que transformam o complexo em simples, 
+    desenvolvidas por um time sempre disposto a ouvir e interagir de forma transparente com nossos usuários.
+    `);
+    const text3 = CreateElement("H3", "A rotina pode ser descomplicada e o que é essencial para torná-la habitual está no Magenament Custumer.");
+
+    const divHomeMain = CreateElement("div", [text, text2, text3], "class", "main-home-content");
+
+    let divMain = 
+    CreateElement("div", [divHomeMain], "id", "main-contend");
+
+    element.parentNode.replaceChild(divMain, element);
+}
+
 function RenderScreenGet(){
     let element = document.getElementById("main-contend");
 
