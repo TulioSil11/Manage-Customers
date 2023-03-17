@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&family=Pacifico&family=Rammetto+One&family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kanit&family=Rammetto+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    background-color: #b8e7f3;
+    font-size: 100%;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+.logo-image{
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+}
+
+
+.head-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 12px;
+}
+
+.head-menu-item{
+    background-color:rgba(144,  203,  44,  0);
+    width: 80px;
+    height: 40px;
+    outline: #010708;
+    border-radius: 20px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-home-content{
+    padding: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+
+.image-home{
+    width: 95%;
+    height: 20%;
+    margin: 10px;
+}
+
+
+.content-main-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content-main-button{
+    position: relative;
+    width: 250px;
+    height: 50px;
+    margin-right: 15px;
+    margin-top: 10px;
+    background-color:rgba(144,  203,  44,  0);
+    outline: #010708;
+    border-radius: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.main-contend{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    padding: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button:hover{
+    background-color: #65dcfa;
+}
+
+input{
+    background-color: #a5eafc;
+    border-radius: 20px;
+    outline: #010708;
+    margin-left: 10px;
+    width: 100px;
+    height: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+    
+}
+
+th, tr{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.title-table{
+    background-color: #65dcfa;
+}
+
+
